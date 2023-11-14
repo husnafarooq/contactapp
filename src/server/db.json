@@ -1,0 +1,52 @@
+{
+  "contacts": [
+    {
+      "id": 2,
+      "name": "Henza",
+      "email": "henza@gmail.com",
+      "phone": "9876043210",
+      "photourl": "https://th.bing.com/th/id/OIP.P2_NTApRZV05L-lamcKRQAAAAA?pid=ImgDet&w=181&h=181&c=7",
+      "company": "DEF company",
+      "title": "Senior developer",
+      "GroupId": "1"
+    },
+    {
+      "id": 3,
+      "name": "farooq pm",
+      "email": "farooq@gmail.com",
+      "phone": "9876563210",
+      "photourl": "https://th.bing.com/th/id/OIP.3DIU6_qyDc7-g8fbQbQfNgHaHa?pid=ImgDet&w=181&h=181&c=7",
+      "company": "XYZ company",
+      "title": "Manager",
+      "GroupId": "3"
+    },
+    {
+      "id": 4,
+      "name": "Raihana  a a",
+      "email": "raihana@gmail.com",
+      "phone": "9876540210",
+      "photourl": "https://th.bing.com/th/id/OIP.e1QTXa6JylZfVlcmZdY6PQHaJL?pid=ImgDet&w=207&h=255&c=7",
+      "company": "EFG company",
+      "title": "developer",
+      "GroupId": "1"
+    },
+    {
+      "GroupId": "3",
+      "id": "1"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "Company"
+    },
+    {
+      "id": "2",
+      "name": "family"
+    },
+    {
+      "id": "3",
+      "name": "friends"
+    }
+  ]
+}

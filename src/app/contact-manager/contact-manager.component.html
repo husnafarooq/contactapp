@@ -1,0 +1,84 @@
+Login Details:{{loginDate|date:'short'}}
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="my-3">CONTACT MANAGEMENT APPLICATION</h1>
+            <p style="text-align: justify;">A contact management system records interactions between a company and
+                 its customers or prospects, supply chain partners, or other contacts. Call date tracking, notes 
+                 files, follow-up reminders, birthday or anniversary date reminders,
+                  and other mechanisms to give systematic means to begin and track engagement 
+                  over time are common functions.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex justify-content-between">
+            <div>
+                <!-- search -->
+            <input (keyup)="search($event)" type="text" placeholder="search contact" class="form-control">
+            </div>
+            
+            <!-- add contact button  -->
+            <button class="btn btn-outline-dark" routerLink="addContact">Add Contact</button>
+        </div>
+    </div>
+    <!-- string interpolation -->
+    {{heading}}
+    <!-- {{allContacts|json}} -->
+    <div class="row">
+        <div class="col-6" *ngFor="let contact of allContacts | filter:searchKey:'name'">
+          <div class="card my-3">
+            <div class="row">
+              <div class="col-6 ">
+                <!-- image  -->
+                <img class="m-2" width="200px" height="200px" [src]="contact.photourl" alt="">
+              </div>
+              <div class="col-6">
+                <!-- content  -->
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Full Name</div>
+                        {{contact.name}}
+                      </div>
+                      <!-- view -->
+                      <span class="badge bg-dark rounded-pill p-3">
+                        <a routerLink="/contactManager/viewContact/{{contact.id}}">
+                          <i class="fa-sharp fa-solid fa-eye text-light"></i>
+                        </a>
+                        
+                      </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Phone Number</div>
+                        {{contact.phone}}
+                      </div>
+                      <!-- edit -->
+                      <span class="badge bg-dark rounded-pill p-3">
+                        <a routerLink="/contactManager/editContact/{{contact.id}}">
+                          <i class="fa-sharp fa-solid fa-pen text-light"></i>
+                        </a>
+                        
+                      </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Email</div>
+                        {{contact.email}}
+                      </div>
+                      <!-- delete -->
+                      <button (click)="deleteContact(contact.id)" class="badge bg-dark rounded-pill p-3">
+                        <a routerLink="">
+                          <i class="fa-sharp fa-solid fa-trash text-light"></i>
+                        </a>
+                      </button>
+                    </li>
+                  </ol>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+
